@@ -31,7 +31,6 @@ window.addEventListener("scroll", function () {
 
 // ================= Contact Form =================
 
-// Replace with your API Gateway Invoke URL + /contact
 const apiUrl = "https://boooa02qvd.execute-api.eu-north-1.amazonaws.com/contact";
 
 
