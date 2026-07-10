@@ -29,7 +29,7 @@ function drawParticles() {
   particles.forEach(p => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(147,197,253,${p.alpha})`;
+    ctx.fillStyle = `rgba(251,182,206,${p.alpha})`;
     ctx.fill();
 
     p.x += p.dx;
@@ -49,7 +49,7 @@ function drawParticles() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(99,179,237,${0.12 * (1 - dist / 120)})`;
+        ctx.strokeStyle = `rgba(236,72,153,${0.12 * (1 - dist / 120)})`;
         ctx.lineWidth = 0.6;
         ctx.stroke();
       }
@@ -57,6 +57,11 @@ function drawParticles() {
   }
 
   requestAnimationFrame(drawParticles);
+}
+
+// ── Session Check ────────────────────────────────
+if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+  window.location.replace('user-login.html');
 }
 
 resize();
