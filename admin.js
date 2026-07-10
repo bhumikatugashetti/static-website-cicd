@@ -38,7 +38,7 @@ function adminLogin() {
   spinner.style.display  = 'block';
 
   setTimeout(() => {
-    if (username === 'admin' && password === 'admin123') {
+    if (username === 'bhumika' && password === 'bhumika@06') {
       sessionStorage.setItem('isLoggedIn', 'true');
       message.style.color = '#34d399';
       message.innerHTML   = '✅ Login successful! Redirecting…';
