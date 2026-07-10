@@ -28,18 +28,25 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
         <div class="dropdown-menu">
+          <a href="user-dashboard.html" class="dropdown-item di-user">
+            <div class="di-icon">📊</div>
+            <div>
+              <strong>User Dashboard</strong>
+              <small>View your services & bills</small>
+            </div>
+          </a>
           <a href="admin.html" class="dropdown-item di-admin">
             <div class="di-icon">🛡️</div>
             <div>
-              <strong>Admin Login</strong>
+              <strong>Admin Portal</strong>
               <small>Manage platform & messages</small>
             </div>
           </a>
-          <a href="user-login.html" class="dropdown-item di-user">
-            <div class="di-icon">👤</div>
+          <a href="#" class="dropdown-item" onclick="sessionStorage.removeItem('isLoggedIn'); window.location.reload();" style="border-top: 1px solid rgba(255,255,255,0.08);">
+            <div class="di-icon" style="background: rgba(239,68,68,0.1); color: #f87171;">🚪</div>
             <div>
-              <strong>User Login</strong>
-              <small>Access your account</small>
+              <strong>Logout</strong>
+              <small>End your session</small>
             </div>
           </a>
         </div>
@@ -54,6 +61,7 @@
   <div class="hero-blob blob-a"></div>
   <div class="hero-blob blob-b"></div>
   <div class="hero-blob blob-c"></div>
+  <div class="hero-blob blob-d"></div>
 
   <div class="hero-content">
     <div class="hero-badge">
