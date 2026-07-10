@@ -1,5 +1,5 @@
 // Replace with your GET API URL
-const apiUrl = "https://YOUR_API_ID.execute-api.eu-north-1.amazonaws.com/contacts";
+const apiUrl = "https://boooa02qvd.execute-api.eu-north-1.amazonaws.com/contacts";
 
 // Load messages when page opens
 window.onload = function () {
