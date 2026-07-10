@@ -1,6 +1,6 @@
 /* ============================================
-   CLOUDNOVA — USER LOGIN
-   Theme: Teal / Emerald  
+   CLOUDNOVA — USER LOGIN (MATCHING PINK THEME)
+   Theme: Pink / Fuchsia / Violet
 ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -12,20 +12,21 @@
 }
 
 :root {
-  --teal-deep:    #042f2e;
-  --teal-mid:     #065f46;
-  --teal-bright:  #10b981;
-  --teal-glow:    rgba(16,185,129,0.35);
-  --dark-bg:      #030a09;
-  --dark-panel:   #050f0d;
-  --card-bg:      rgba(255,255,255,0.04);
-  --border:       rgba(255,255,255,0.09);
-  --border-teal:  rgba(16,185,129,0.3);
-  --text-primary:   #ecfdf5;
-  --text-secondary: #6ee7b7;
+  --bg-deep:      #0d0010;
+  --bg-panel:     #1a0025;
+  --pink:         #ec4899;
+  --hot-pink:     #f43f5e;
+  --rose:         #fb7185;
+  --fuchsia:      #d946ef;
+  --violet:       #a855f7;
+  --text-primary:   #fdf2f8;
+  --text-secondary: #f9a8d4;
   --text-muted:     #6b7280;
-  --gradient-panel: linear-gradient(145deg, #010f0d 0%, #050f0d 40%, #030a09 100%);
-  --gradient-btn:   linear-gradient(135deg, #059669, #047857);
+  --gradient-panel: linear-gradient(145deg, #0d0010 0%, #1a0025 40%, #0d0010 100%);
+  --gradient-btn:   linear-gradient(135deg, #db2777, #9333ea);
+  --gradient-btn-h: linear-gradient(135deg, #ec4899, #a855f7);
+  --border:       rgba(255,255,255,0.07);
+  --border-pink:  rgba(236,72,153,0.3);
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -34,7 +35,7 @@ html, body {
 }
 
 body {
-  background: var(--dark-bg);
+  background: var(--bg-deep);
   color: var(--text-primary);
   display: flex;
   align-items: stretch;
@@ -42,7 +43,6 @@ body {
   overflow: hidden;
 }
 
-/* ── Page Layout ── */
 .page-wrapper {
   display: flex;
   width: 100%;
@@ -54,7 +54,7 @@ body {
   position: relative;
   width: 52%;
   background: var(--gradient-panel);
-  border-right: 1px solid rgba(16,185,129,0.15);
+  border-right: 1px solid rgba(236,72,153,0.15);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -92,7 +92,7 @@ body {
 .brand h1 {
   font-size: 32px;
   font-weight: 800;
-  background: linear-gradient(90deg, #6ee7b7, #34d399);
+  background: linear-gradient(90deg, #fb7185, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,9 +100,9 @@ body {
 
 .panel-badge {
   display: inline-block;
-  background: rgba(16,185,129,0.12);
-  border: 1px solid rgba(16,185,129,0.28);
-  color: #6ee7b7;
+  background: rgba(236,72,153,0.12);
+  border: 1px solid rgba(236,72,153,0.28);
+  color: #f9a8d4;
   font-size: 11px;
   font-weight: 700;
   padding: 6px 14px;
@@ -123,7 +123,7 @@ body {
 
 .info-panel > .panel-inner > p {
   font-size: 16px;
-  color: #9ca3af;
+  color: #be8fa8;
   line-height: 1.8;
   margin-bottom: 44px;
   max-width: 420px;
@@ -148,21 +148,21 @@ body {
 }
 
 .feature-item:hover {
-  background: rgba(16,185,129,0.07);
-  border-color: var(--border-teal);
+  background: rgba(236,72,153,0.07);
+  border-color: var(--border-pink);
 }
 
 .fi-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(16,185,129,0.12);
-  border: 1px solid rgba(16,185,129,0.22);
+  background: rgba(236,72,153,0.12);
+  border: 1px solid rgba(236,72,153,0.22);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 17px;
-  color: #34d399;
+  color: #ec4899;
   flex-shrink: 0;
 }
 
@@ -188,21 +188,21 @@ body {
 
 .blob-1 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(4,47,46,0.22) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(236,72,153,0.18) 0%, transparent 70%);
   top: -150px; left: -150px;
   animation: blobFloat 14s ease-in-out infinite;
 }
 
 .blob-2 {
   width: 350px; height: 350px;
-  background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168,85,247,0.1) 0%, transparent 70%);
   bottom: -100px; right: 0;
   animation: blobFloat 10s ease-in-out infinite reverse;
 }
 
 .blob-3 {
   width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(52,211,153,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(217,70,239,0.07) 0%, transparent 70%);
   top: 50%; left: 50%;
   animation: blobFloat 8s ease-in-out infinite;
 }
@@ -219,7 +219,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background: #050505;
+  background: #08000c;
   overflow-y: auto;
 }
 
@@ -234,9 +234,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(16,185,129,0.1);
-  border: 1px solid rgba(16,185,129,0.25);
-  color: #6ee7b7;
+  background: rgba(236,72,153,0.1);
+  border: 1px solid rgba(236,72,153,0.25);
+  color: #f9a8d4;
   font-size: 12px;
   font-weight: 700;
   padding: 7px 14px;
@@ -280,7 +280,7 @@ body {
 .input-wrap > i {
   position: absolute;
   left: 16px;
-  color: #374151;
+  color: #be8fa8;
   font-size: 15px;
   pointer-events: none;
 }
@@ -298,19 +298,19 @@ body {
 }
 
 .input-wrap input:focus {
-  border-color: #10b981;
-  background: rgba(16,185,129,0.06);
-  box-shadow: 0 0 0 3px rgba(16,185,129,0.12);
+  border-color: #ec4899;
+  background: rgba(236,72,153,0.06);
+  box-shadow: 0 0 0 3px rgba(236,72,153,0.12);
 }
 
-.input-wrap input::placeholder { color: #1f2937; }
+.input-wrap input::placeholder { color: #4a1a30; }
 
 .toggle-pw {
   position: absolute;
   right: 14px;
   background: none;
   border: none;
-  color: #4b5563;
+  color: #be8fa8;
   cursor: pointer;
   font-size: 14px;
   transition: var(--transition);
@@ -318,7 +318,7 @@ body {
   padding: 0 !important;
 }
 
-.toggle-pw:hover { color: #9ca3af; }
+.toggle-pw:hover { color: #fdf2f8; }
 
 /* Options Row */
 .options-row {
@@ -339,18 +339,18 @@ body {
 
 .checkbox-label input[type="checkbox"] {
   width: 16px; height: 16px;
-  accent-color: #10b981;
+  accent-color: #ec4899;
 }
 
 .forgot-link {
   font-size: 13px;
-  color: #34d399;
+  color: #ec4899;
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
 }
 
-.forgot-link:hover { color: #6ee7b7; }
+.forgot-link:hover { color: #f9a8d4; }
 
 /* Login Button */
 button#loginBtn {
@@ -365,7 +365,7 @@ button#loginBtn {
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(5,150,105,0.4);
+  box-shadow: 0 4px 20px rgba(219,39,119,0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,7 +374,7 @@ button#loginBtn {
 
 button#loginBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(5,150,105,0.55);
+  box-shadow: 0 8px 32px rgba(219,39,119,0.55);
 }
 
 button#loginBtn:disabled {
@@ -418,7 +418,7 @@ button#loginBtn:disabled {
 
 .divider span {
   position: relative;
-  background: #050505;
+  background: #08000c;
   padding: 0 14px;
   font-size: 12px;
   color: var(--text-muted);
@@ -437,7 +437,7 @@ button#loginBtn:disabled {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 12px;
-  color: #9ca3af;
+  color: #be8fa8;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -445,9 +445,55 @@ button#loginBtn:disabled {
 }
 
 .alt-login-link:hover {
-  border-color: rgba(239,68,68,0.4);
-  color: #fca5a5;
-  background: rgba(239,68,68,0.05);
+  border-color: rgba(236,72,153,0.4);
+  color: #f9a8d4;
+  background: rgba(236,72,153,0.05);
+}
+
+/* ── Brand Intro Overlay ── */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0d0010;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.intro-logo {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #fb7185, #ec4899, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logoZoomOut 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes logoZoomOut {
+  0% {
+    transform: scale(2.5);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+.intro-overlay.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* ── Responsive ── */
