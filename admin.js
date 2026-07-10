@@ -38,7 +38,8 @@ function adminLogin() {
   spinner.style.display  = 'block';
 
   setTimeout(() => {
-    if (username === 'bhumika' && password === 'bhumika@06') {
+    if (username === 'admin' && password === 'admin123') {
+      sessionStorage.setItem('isLoggedIn', 'true');
       message.style.color = '#34d399';
       message.innerHTML   = '✅ Login successful! Redirecting…';
       setTimeout(() => { window.location.href = 'dashboard.html'; }, 1000);
@@ -58,4 +59,14 @@ function adminLogin() {
   document.getElementById(id).addEventListener('keydown', e => {
     if (e.key === 'Enter') adminLogin();
   });
+});
+
+// Brand Intro Overlay Animation trigger
+window.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('introOverlay');
+  if (overlay) {
+    setTimeout(() => {
+      overlay.classList.add('hide');
+    }, 1800); // 1.8s matching logoZoomOut keyframe length
+  }
 });
