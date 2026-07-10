@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard — CloudNova</title>
+  <meta name="description" content="CloudNova user dashboard — manage your cloud services and requests.">
+  <link rel="stylesheet" href="user-dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <span class="logo-icon">☁</span>
+    <span class="logo-text">CloudNova</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-section="dashboard">
+      <i class="fas fa-th-large"></i>
+      <span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-item" data-section="services">
+      <i class="fas fa-layer-group"></i>
+      <span>My Services</span>
+    </a>
+    <a href="#" class="nav-item" data-section="tickets">
+      <i class="fas fa-ticket-alt"></i>
+      <span>Support Tickets</span>
+    </a>
+    <a href="#" class="nav-item" data-section="billing">
+      <i class="fas fa-file-invoice-dollar"></i>
+      <span>Billing</span>
+    </a>
+    <a href="#" class="nav-item" data-section="settings">
+      <i class="fas fa-cog"></i>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-avatar">U</div>
+    <div class="user-info">
+      <div class="user-name">User Account</div>
+      <div class="user-role">Standard User</div>
+    </div>
+    <button class="logout-btn" onclick="logout()" title="Logout">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</aside>
+
+<!-- ── Main Content ── -->
+<main class="main-content">
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div>
+        <h1 class="page-title">Dashboard</h1>
+        <div id="dateTime" class="page-subtitle"></div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="notif-btn">
+        <i class="fas fa-bell"></i>
+        <span class="notif-dot"></span>
+      </div>
+      <div class="user-chip">
+        <div class="chip-avatar">U</div>
+        <span>Hello, User 👋</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Body -->
+  <div class="content-area">
+
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <div class="wb-text">
+        <h2>Welcome back! 🌿</h2>
+        <p>Your cloud services are running smoothly. Here's a quick overview of your account.</p>
+      </div>
+      <div class="wb-icon">☁️</div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="sc-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="sc-info">
+          <div class="sc-num">3</div>
+          <div class="sc-label">Active Services</div>
+        </div>
+        <div class="sc-badge sc-badge-green">Running</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="sc-icon sc-icon-yellow"><i class="fas fa-ticket-alt"></i></div>
+        <div class="sc-info">
+          <div class="sc-num">1</div>
+          <div class="sc-label">Open Tickets</div>
+        </div>
+        <div class="sc-badge sc-badge-yellow">Pending</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="sc-icon sc-icon-blue"><i class="fas fa-database"></i></div>
+        <div class="sc-info">
+          <div class="sc-num">24 GB</div>
+          <div class="sc-label">Storage Used</div>
+        </div>
+        <div class="sc-badge sc-badge-blue">47% Used</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="sc-icon sc-icon-purple"><i class="fas fa-dollar-sign"></i></div>
+        <div class="sc-info">
+          <div class="sc-num">$48</div>
+          <div class="sc-label">This Month's Cost</div>
+        </div>
+        <div class="sc-badge sc-badge-purple">On Budget</div>
+      </div>
+    </div>
+
+    <!-- Two Column Section -->
+    <div class="two-col">
+
+      <!-- Active Services -->
+      <div class="panel">
+        <div class="panel-header">
+          <h3><i class="fas fa-layer-group"></i> My Active Services</h3>
+          <button class="panel-btn">View All</button>
+        </div>
+        <div class="services-list">
+          <div class="service-row">
+            <div class="sr-icon">☁️</div>
+            <div class="sr-info">
+              <div class="sr-name">EC2 Instance</div>
+              <div class="sr-detail">t3.micro — us-east-1</div>
+            </div>
+            <span class="status-pill pill-green">Running</span>
+          </div>
+          <div class="service-row">
+            <div class="sr-icon">🗄️</div>
+            <div class="sr-info">
+              <div class="sr-name">S3 Bucket</div>
+              <div class="sr-detail">cloudnova-user-assets</div>
+            </div>
+            <span class="status-pill pill-green">Active</span>
+          </div>
+          <div class="service-row">
+            <div class="sr-icon">🌐</div>
+            <div class="sr-info">
+              <div class="sr-name">Static Website</div>
+              <div class="sr-detail">CloudFront Distribution</div>
+            </div>
+            <span class="status-pill pill-green">Online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="panel">
+        <div class="panel-header">
+          <h3><i class="fas fa-history"></i> Recent Activity</h3>
+          <button class="panel-btn">View All</button>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="ai-dot ai-dot-green"></div>
+            <div class="ai-info">
+              <div class="ai-title">EC2 Instance restarted</div>
+              <div class="ai-time">Today, 10:22 AM</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="ai-dot ai-dot-blue"></div>
+            <div class="ai-info">
+              <div class="ai-title">S3 Upload completed (2.4 GB)</div>
+              <div class="ai-time">Yesterday, 3:15 PM</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="ai-dot ai-dot-yellow"></div>
+            <div class="ai-info">
+              <div class="ai-title">Support ticket #124 opened</div>
+              <div class="ai-time">Jul 8, 11:00 AM</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="ai-dot ai-dot-green"></div>
+            <div class="ai-info">
+              <div class="ai-title">CloudFront cache cleared</div>
+              <div class="ai-time">Jul 7, 9:45 AM</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="ai-dot ai-dot-blue"></div>
+            <div class="ai-info">
+              <div class="ai-title">Monthly billing generated — $48</div>
+              <div class="ai-time">Jul 1, 12:00 AM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Support Ticket Quick Form -->
+    <div class="panel ticket-panel">
+      <div class="panel-header">
+        <h3><i class="fas fa-headset"></i> Raise a Support Ticket</h3>
+      </div>
+      <form class="ticket-form" onsubmit="submitTicket(event)">
+        <div class="tf-row">
+          <div class="tf-group">
+            <label>Issue Category</label>
+            <select id="ticketCategory">
+              <option>Billing</option>
+              <option>Service Outage</option>
+              <option>Performance</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="tf-group">
+            <label>Priority</label>
+            <select id="ticketPriority">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select>
+          </div>
+        </div>
+        <div class="tf-group">
+          <label>Description</label>
+          <textarea id="ticketDescription" placeholder="Describe your issue in detail…" rows="4"></textarea>
+        </div>
+        <button type="submit" class="tf-submit">
+          <i class="fas fa-paper-plane"></i> Submit Ticket
+        </button>
+        <p id="ticketMsg"></p>
+      </form>
+    </div>
+
+  </div><!-- end content-area -->
+
+</main>
+
+<script src="user-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloudNova Admin Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        ☁ CloudNova
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+
+            <i class="fas fa-chart-line"></i>
+
+            Dashboard
+
+        </li>
+
+        <li>
+
+            <i class="fas fa-envelope"></i>
+
+            Contact Messages
+
+        </li>
+
+        <li>
+
+            <i class="fas fa-cloud"></i>
+
+            AWS Status
+
+        </li>
+
+        <li>
+
+            <i class="fas fa-users"></i>
+
+            Team
+
+        </li>
+
+        <li onclick="logout()">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            Logout
+
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <div class="top">
+
+        <h1>
+
+            Welcome Admin 👋
+
+        </h1>
+
+        <div id="dateTime"></div>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fas fa-envelope"></i>
+
+            <h3>Total Messages</h3>
+
+            <h2 id="totalMessages">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-server"></i>
+
+            <h3>Backend</h3>
+
+            <h2>Connected</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-globe"></i>
+
+            <h3>Website</h3>
+
+            <h2>Online</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-database"></i>
+
+            <h3>Database</h3>
+
+            <h2>Active</h2>
+
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <div class="table-header">
+
+            <h2>📨 Contact Messages</h2>
+
+            <button onclick="loadMessages()">
+
+                Refresh
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Message</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

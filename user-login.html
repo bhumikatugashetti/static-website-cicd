@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login — CloudNova</title>
+  <meta name="description" content="Log in to your CloudNova user account to access services and your dashboard.">
+  <link rel="stylesheet" href="user-login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Left Info Panel -->
+  <div class="info-panel">
+    <div class="panel-inner">
+      <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Website
+      </a>
+
+      <div class="brand">
+        <div class="brand-icon">☁️</div>
+        <h1>CloudNova</h1>
+      </div>
+
+      <div class="panel-badge">User Portal</div>
+
+      <h2>Your Cloud<br>Dashboard Awaits</h2>
+      <p>Access your active services, monitor your requests, and manage your cloud account — all in one place.</p>
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="fi-icon"><i class="fas fa-layer-group"></i></div>
+          <div>
+            <strong>View Active Services</strong>
+            <span>Track your running AWS resources</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon"><i class="fas fa-ticket-alt"></i></div>
+          <div>
+            <strong>Support Requests</strong>
+            <span>Submit and track support tickets</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div>
+            <strong>Billing &amp; Usage</strong>
+            <span>Monitor your cloud spend</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="fi-icon"><i class="fas fa-bell"></i></div>
+          <div>
+            <strong>Notifications</strong>
+            <span>Stay updated on service events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Right Login Panel -->
+  <div class="login-panel">
+    <div class="login-card">
+
+      <div class="card-top">
+        <div class="card-badge">
+          <i class="fas fa-user-circle"></i>
+          User Account
+        </div>
+        <h2>Welcome Back</h2>
+        <p>Sign in to access your CloudNova portal</p>
+      </div>
+
+      <div class="input-group">
+        <label for="username">Username</label>
+        <div class="input-wrap">
+          <i class="fas fa-user"></i>
+          <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" placeholder="Enter your password">
+          <button class="toggle-pw" onclick="togglePw('password', this)" type="button" tabindex="-1">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="options-row">
+        <label class="checkbox-label">
+          <input type="checkbox" id="rememberUser">
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button id="loginBtn" onclick="userLogin()">
+        <span id="loginBtnText">Sign In</span>
+        <i class="fas fa-arrow-right" id="loginIcon"></i>
+        <div class="spinner" id="loginSpinner" style="display:none;"></div>
+      </button>
+
+      <p id="message"></p>
+
+      <div class="divider"><span>or</span></div>
+
+      <a href="admin.html" class="alt-login-link">
+        <i class="fas fa-shield-alt"></i>
+        Switch to Admin Login
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="user-login.js"></script>
+</body>
+</html>
