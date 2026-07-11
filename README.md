@@ -46,7 +46,7 @@ The website includes User and Admin modules, cloud learning resources, workflows
 
 # 🏗 AWS Architecture
 
-![AWS Architecture](screenshots/architecture.png)
+![AWS Architecture](architecture.png)
 
 ---
 
@@ -61,52 +61,52 @@ Whenever new code is pushed to GitHub, AWS CodePipeline automatically deploys th
 # 📸 Website Screenshots
 
 ## 🏠 Home Page
-![Home](screenshots/home.png)
+![Home](home.png)
 
 ---
 
 ## 👤 User Login
-![User Login](screenshots/user-login.png)
+![User Login](user-login.png)
 
 ---
 
 ## 👨‍💻 User Dashboard
-![User Dashboard](screenshots/user-dashboard.png)
+![User Dashboard](user-dashboard.png)
 
 ---
 
 ## 🔐 Admin Login
-![Admin Login](screenshots/admin-login.png)
+![Admin Login](admin-login.png)
 
 ---
 
 ## 🛡️ Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](admin-dashboard.png)
 
 ---
 
 ## ℹ️ About Page
-![About](screenshots/about.png)
+![About](about.png)
 
 ---
 
 ## 🛠 Services
-![Services](screenshots/services.png)
+![Services](services.png)
 
 ---
 
 ## 🔄 Workflow
-![Workflow](screenshots/workflow.png)
+![Workflow](workflow.png)
 
 ---
 
 ## 👥 Team
-![Team](screenshots/team.png)
+![Team](team.png)
 
 ---
 
 ## 📞 Contact Page
-![Contact](screenshots/contact.png)
+![Contact](contact.png)
 
 ---
 
@@ -114,37 +114,37 @@ Whenever new code is pushed to GitHub, AWS CodePipeline automatically deploys th
 
 ## Amazon S3 - Bucket Objects
 
-![S3 Objects](screenshots/s3-objects.png)
+![S3 Objects](s3-objects.png)
 
 ---
 
 ## Amazon S3 - Static Website Hosting
 
-![S3 Hosting](screenshots/s3-hosting.png)
+![S3 Hosting](s3-hosting.png)
 
 ---
 
 ## AWS CodePipeline
 
-![CodePipeline](screenshots/codepipeline.png)
+![CodePipeline](codepipeline.png)
 
 ---
 
 ## AWS Lambda
 
-![Lambda](screenshots/lambda.png)
+![Lambda](lambda.png)
 
 ---
 
 ## API Gateway
 
-![API Gateway](screenshots/apigateway.png)
+![API Gateway](apigateway.png)
 
 ---
 
 ## Amazon DynamoDB
 
-![DynamoDB](screenshots/dynamodb.png)
+![DynamoDB](dynamodb.png)
 
 ---
 
