@@ -193,9 +193,9 @@ Through this project, we learned:
 # 👨‍💻 Team Members
 
 - **Bhumika Basavaraj Tugashetti** – Team Leader
-- Team Member 2
-- Team Member 3
-- Team Member 4
+- **Bhumika J Shetty** - Team Member 2
+- **Chitra** - Team Member 3
+- **Sree Vishnu** - Team Member 4
 
 ---
 
