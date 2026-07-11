@@ -103,9 +103,6 @@ Whenever new code is pushed to GitHub, AWS CodePipeline automatically deploys th
 
 ---
 
-## 👥 Team
-![Team](team.png)
-
 ---
 
 ## 📞 Contact Page
