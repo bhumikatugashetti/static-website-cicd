@@ -1,3 +1,6 @@
+## 🌐 Live Demo
+
+**Website:** http://bhumika-website-project-123.s3-website.eu-north-1.amazonaws.com
 # ☁️ CloudNova Solutions – Static Website Hosting with CI/CD on AWS
 
 ## 📌 Project Overview
